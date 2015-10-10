@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.ITrade.com/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ITrade.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.ITrade.com/Imports">
+      <xsd:import schemaLocation="http://192.168.0.2:8914/ITrade/ITrade?xsd=xsd0" namespace="http://www.ITrade.com/" />
+      <xsd:import schemaLocation="http://192.168.0.2:8914/ITrade/ITrade?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.0.2:8914/ITrade/ITrade?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://192.168.0.2:8914/ITrade/ITrade?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/JtMarketDistribution" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITrade_GetRealprice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRealprice" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_GetRealprice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRealpriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_GetRealData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRealData" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_GetRealData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRealDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_GetProPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProPrice" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_GetProPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_GetAllLastPillar_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLastPillar" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_GetAllLastPillar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLastPillarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_GetLastPillarData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastPillarData" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_GetLastPillarData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastPillarDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_GetServerTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerTime" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_GetServerTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_SetRateAndWater_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRateAndWater" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_SetRateAndWater_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRateAndWaterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_ModifyTradeDataSource_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyTradeDataSource" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_ModifyTradeDataSource_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyTradeDataSourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_AddTradeDataSource_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTradeDataSource" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_AddTradeDataSource_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTradeDataSourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_GetTradeRateInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTradeRateInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_GetTradeRateInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTradeRateInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_ModifyDateSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyDateSet" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_ModifyDateSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyDateSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_GetDateSetInfoEx_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDateSetInfoEx" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_GetDateSetInfoEx_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDateSetInfoExResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_GetHolidayInfoEx_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHolidayInfoEx" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_GetHolidayInfoEx_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHolidayInfoExResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_ModifyHoliday_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyHoliday" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_ModifyHoliday_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyHolidayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_AddHoliday_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddHoliday" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_AddHoliday_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddHolidayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_DelHoliday_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelHoliday" />
+  </wsdl:message>
+  <wsdl:message name="ITrade_DelHoliday_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelHolidayResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITrade">
+    <wsdl:operation name="GetRealprice">
+      <wsdl:input wsaw:Action="http://www.ITrade.com/ITrade/GetRealprice" message="tns:ITrade_GetRealprice_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ITrade.com/ITrade/GetRealpriceResponse" message="tns:ITrade_GetRealprice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRealData">
+      <wsdl:input wsaw:Action="http://www.ITrade.com/ITrade/GetRealData" message="tns:ITrade_GetRealData_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ITrade.com/ITrade/GetRealDataResponse" message="tns:ITrade_GetRealData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProPrice">
+      <wsdl:input wsaw:Action="http://www.ITrade.com/ITrade/GetProPrice" message="tns:ITrade_GetProPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ITrade.com/ITrade/GetProPriceResponse" message="tns:ITrade_GetProPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLastPillar">
+      <wsdl:input wsaw:Action="http://www.ITrade.com/ITrade/GetAllLastPillar" message="tns:ITrade_GetAllLastPillar_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ITrade.com/ITrade/GetAllLastPillarResponse" message="tns:ITrade_GetAllLastPillar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastPillarData">
+      <wsdl:input wsaw:Action="http://www.ITrade.com/ITrade/GetLastPillarData" message="tns:ITrade_GetLastPillarData_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ITrade.com/ITrade/GetLastPillarDataResponse" message="tns:ITrade_GetLastPillarData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerTime">
+      <wsdl:input wsaw:Action="http://www.ITrade.com/ITrade/GetServerTime" message="tns:ITrade_GetServerTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ITrade.com/ITrade/GetServerTimeResponse" message="tns:ITrade_GetServerTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRateAndWater">
+      <wsdl:input wsaw:Action="http://www.ITrade.com/ITrade/SetRateAndWater" message="tns:ITrade_SetRateAndWater_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ITrade.com/ITrade/SetRateAndWaterResponse" message="tns:ITrade_SetRateAndWater_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyTradeDataSource">
+      <wsdl:input wsaw:Action="http://www.ITrade.com/ITrade/ModifyTradeDataSource" message="tns:ITrade_ModifyTradeDataSource_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ITrade.com/ITrade/ModifyTradeDataSourceResponse" message="tns:ITrade_ModifyTradeDataSource_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTradeDataSource">
+      <wsdl:input wsaw:Action="http://www.ITrade.com/ITrade/AddTradeDataSource" message="tns:ITrade_AddTradeDataSource_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ITrade.com/ITrade/AddTradeDataSourceResponse" message="tns:ITrade_AddTradeDataSource_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTradeRateInfo">
+      <wsdl:input wsaw:Action="http://www.ITrade.com/ITrade/GetTradeRateInfo" message="tns:ITrade_GetTradeRateInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ITrade.com/ITrade/GetTradeRateInfoResponse" message="tns:ITrade_GetTradeRateInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyDateSet">
+      <wsdl:input wsaw:Action="http://www.ITrade.com/ITrade/ModifyDateSet" message="tns:ITrade_ModifyDateSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ITrade.com/ITrade/ModifyDateSetResponse" message="tns:ITrade_ModifyDateSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDateSetInfoEx">
+      <wsdl:input wsaw:Action="http://www.ITrade.com/ITrade/GetDateSetInfoEx" message="tns:ITrade_GetDateSetInfoEx_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ITrade.com/ITrade/GetDateSetInfoExResponse" message="tns:ITrade_GetDateSetInfoEx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHolidayInfoEx">
+      <wsdl:input wsaw:Action="http://www.ITrade.com/ITrade/GetHolidayInfoEx" message="tns:ITrade_GetHolidayInfoEx_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ITrade.com/ITrade/GetHolidayInfoExResponse" message="tns:ITrade_GetHolidayInfoEx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyHoliday">
+      <wsdl:input wsaw:Action="http://www.ITrade.com/ITrade/ModifyHoliday" message="tns:ITrade_ModifyHoliday_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ITrade.com/ITrade/ModifyHolidayResponse" message="tns:ITrade_ModifyHoliday_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddHoliday">
+      <wsdl:input wsaw:Action="http://www.ITrade.com/ITrade/AddHoliday" message="tns:ITrade_AddHoliday_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ITrade.com/ITrade/AddHolidayResponse" message="tns:ITrade_AddHoliday_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelHoliday">
+      <wsdl:input wsaw:Action="http://www.ITrade.com/ITrade/DelHoliday" message="tns:ITrade_DelHoliday_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.ITrade.com/ITrade/DelHolidayResponse" message="tns:ITrade_DelHoliday_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

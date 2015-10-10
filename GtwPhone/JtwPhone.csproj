@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{29EFF691-3523-4018-BAE5-6B859881AEEF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JtwPhone</RootNamespace>
+    <AssemblyName>JtwPhone</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="com.gss.common">
+      <HintPath>..\dll\com.gss.common.dll</HintPath>
+    </Reference>
+    <Reference Include="com.individual.helper">
+      <HintPath>..\dll\com.individual.helper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\ICode.cs" />
+    <Compile Include="Code\UC000.cs" />
+    <Compile Include="Code\UC001.cs" />
+    <Compile Include="Code\UC002.cs" />
+    <Compile Include="Code\UC003.cs" />
+    <Compile Include="Code\UC004.cs" />
+    <Compile Include="Code\UC005.cs" />
+    <Compile Include="Code\UC006.cs" />
+    <Compile Include="Code\UC007.cs" />
+    <Compile Include="Code\UC008.cs" />
+    <Compile Include="Code\UC009.cs" />
+    <Compile Include="Code\UC010.cs" />
+    <Compile Include="Code\UC011.cs" />
+    <Compile Include="Code\UC012.cs" />
+    <Compile Include="Code\UC013.cs" />
+    <Compile Include="Code\UC014.cs" />
+    <Compile Include="Code\UC015.cs" />
+    <Compile Include="Code\UC016.cs" />
+    <Compile Include="Code\UC017.cs" />
+    <Compile Include="Code\UC018.cs" />
+    <Compile Include="Const.cs" />
+    <Compile Include="GssGetCode.cs" />
+    <Compile Include="GssResXml.cs" />
+    <Compile Include="Iphone.cs" />
+    <Compile Include="Phone.cs" />
+    <Compile Include="PriceCode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeekFlg.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{7B916515-CF65-43A3-A5AB-4E6B972C7843}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LastPillar\LastPillar.csproj">
+      <Project>{12326AD1-3E66-4ABE-9D23-82D864CFB286}</Project>
+      <Name>LastPillar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Trade\Trade.csproj">
+      <Project>{B0CFAC8A-440B-4552-AC17-940F13B50A70}</Project>
+      <Name>Trade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WcfInterface\WcfInterface.csproj">
+      <Project>{A846C476-14F6-4746-AAEA-CAEC6E1C9C5F}</Project>
+      <Name>WcfInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

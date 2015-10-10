@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JtMarketDistribution" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JtMarketDistribution" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ProPrice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="realprice" type="xs:double" />
+      <xs:element minOccurs="0" name="weektime" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProPrice" nillable="true" type="tns:ProPrice" />
+  <xs:complexType name="TradeSource">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsConvert" type="xs:int" />
+      <xs:element minOccurs="0" name="adjustcount" type="xs:int" />
+      <xs:element minOccurs="0" name="coefficient" type="xs:double" />
+      <xs:element minOccurs="0" name="coefxs" type="xs:double" />
+      <xs:element minOccurs="0" name="pricecode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rate" type="xs:double" />
+      <xs:element minOccurs="0" name="water" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TradeSource" nillable="true" type="tns:TradeSource" />
+  <xs:complexType name="TradeRateInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Desc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Result" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TradeRateInfoList" nillable="true" type="tns:ArrayOfTradeRate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TradeRateInfo" nillable="true" type="tns:TradeRateInfo" />
+  <xs:complexType name="ArrayOfTradeRate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TradeRate" nillable="true" type="tns:TradeRate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTradeRate" nillable="true" type="tns:ArrayOfTradeRate" />
+  <xs:complexType name="TradeRate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PriceCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rate" type="xs:double" />
+      <xs:element minOccurs="0" name="Water" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TradeRate" nillable="true" type="tns:TradeRate" />
+  <xs:complexType name="DateSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Desc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Endtime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Istrade" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PriceCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Starttime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Weekday" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DateSet" nillable="true" type="tns:DateSet" />
+  <xs:complexType name="DateSetInfoEx">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Desc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DtSetInfoList" nillable="true" type="tns:ArrayOfDateSet" />
+      <xs:element minOccurs="0" name="Result" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DateSetInfoEx" nillable="true" type="tns:DateSetInfoEx" />
+  <xs:complexType name="ArrayOfDateSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DateSet" nillable="true" type="tns:DateSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDateSet" nillable="true" type="tns:ArrayOfDateSet" />
+  <xs:complexType name="DateHolidayInfoEx">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Desc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DtHolidayInfoList" nillable="true" type="tns:ArrayOfDateHoliday" />
+      <xs:element minOccurs="0" name="Result" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DateHolidayInfoEx" nillable="true" type="tns:DateHolidayInfoEx" />
+  <xs:complexType name="ArrayOfDateHoliday">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DateHoliday" nillable="true" type="tns:DateHoliday" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDateHoliday" nillable="true" type="tns:ArrayOfDateHoliday" />
+  <xs:complexType name="DateHoliday">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Desc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Endtime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HoliName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PriceCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Starttime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DateHoliday" nillable="true" type="tns:DateHoliday" />
+</xs:schema>

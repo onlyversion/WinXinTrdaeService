@@ -1,0 +1,748 @@
+﻿body
+{
+	font-size: 9pt;
+	font-family: 宋体, Sans-Serif;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+.ul
+{
+	list-style-type:none; padding:0px 0px 0px 0px; margin:0px 0px 0px 0px;
+    } 
+.li
+{
+	list-style-type:none; padding:0px 0px 0px 0px; margin:0px 0px 0px 0px;
+	} 
+table td
+{    margin-left: 40px;
+}
+.ItemTable td
+{
+}
+.TipsTable
+{
+	 width:360px;
+}
+.TipsTable td
+{
+    height:28px;
+    padding:0px 4px 0px 4px;
+}
+.tipsContent
+{
+    color:red;
+    padding:0px 6px 0px 6px;
+    width:106px;
+}
+a
+{
+	font-size: 9pt;
+	font-family: 宋体, Sans-Serif;
+	color: #003399;
+	text-decoration: none;
+}
+a:hover
+{
+	color: #ff0000;
+	text-decoration: underline;
+}
+a:active
+{
+	color:#003399;
+}
+a:link
+{
+	color: #003399;
+}
+.a1
+{
+	font-size: 9pt;
+	font-family: 宋体, Sans-Serif;
+	color: #003399;
+	text-decoration: underline;
+}
+.a1:hover
+{
+	color: #ff0000;
+	text-decoration: underline;
+}
+.a1:active
+{
+	color:#003399;
+}
+.a1:link
+{
+	color: #003399;
+}
+
+
+.PageTitle
+{
+	color: #0083C6;
+	font-weight: bold;
+}
+.BannerTitle
+{
+	padding-left: 20px;
+	height: 24px;
+	color: #ffffff;
+	font-family: 宋体, Sans-Serif;
+	font-size: 9pt;
+	font-weight: bold;
+}
+.Font_BlackRed10pt
+{
+	 font-size:10pt;
+	 color:#bb3333;
+	 font-family: 宋体, Sans-Serif;
+	 font-weight:bold;	
+}
+.Font_BlackStrong10pt
+{
+	 font-size:10pt;
+	 color:#000000;
+	 font-family: 宋体, Sans-Serif;
+	 font-weight:bold;	
+}
+.Font_LightBlue9pt
+{
+	font-size:9pt;
+	color:#62BFF8;
+	font-family: 宋体, Sans-Serif;
+}
+.Font_Grey9pt
+{
+	 font-size:9pt;
+	 color:#999999;
+	 font-family: 宋体, Sans-Serif;
+}
+.Font_WhiteStrong10pt
+{
+	 color:#ffffff;
+	 font-family: 宋体, Sans-Serif;
+	 font-weight:bold;
+}
+.Font_White a
+{
+	font-size: 9pt;
+	font-family: 宋体, Sans-Serif;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight:bold;
+}
+.Font_White a:hover
+{
+	color: #ffffff;
+	text-decoration: underline;
+}
+.Font_White a:active
+{
+	color:#ffffff;
+}
+.Font_White a:link
+{
+	color: #ffffff;
+	font-weight:bold;
+}
+
+.Font_White
+{
+	 color:#ffffff;
+	 font-family: 宋体, Sans-Serif;
+}
+.Font_White a
+{
+	font-size: 9pt;
+	font-family: 宋体, Sans-Serif;
+	color: #ffffff;
+	text-decoration: none;
+}
+.Font_White a:hover
+{
+	color: #ffffff;
+	text-decoration: underline;
+}
+.Font_White a:active
+{
+	color:#ffffff;
+}
+.Font_White a:link
+{
+	color: #ffffff;
+}
+
+.Font_LightBlueStrong
+{
+	 color:#0C95E5;
+	 font-family: 宋体, Sans-Serif;
+	 font-weight:bold;
+}
+.Font_Black9pt
+{
+	font-size: 9pt;
+	font-family: 宋体, Sans-Serif;	
+}
+.Font_BlackStrong9pt
+{
+	font-size:9pt;
+	font-family:宋体, Sans-Serif;
+	font-weight:bold;
+}
+.Font_Red9pt
+{
+	font-size: 9pt;
+	color:#ff0000;
+	font-family: 宋体, Sans-Serif;	
+}
+.Span_Black9pt
+{
+	display:inline-block;
+	text-align:center;	
+}
+.BorderGrey1px
+{
+	border-color:Gray;border-width:1px;border-style:Solid;
+}
+.TableGrey1px
+{	 
+	border-color:#E1E0E0;
+	border-style: solid;
+	border-collapse: collapse;
+	/*word-break: break-all;*/
+	overflow: visible;
+}
+.TableNoCellDashed1px
+{
+	border-width:1px;
+	border-top:dashed;
+	border-left: dashed;
+	border-right: dashed;
+	border-bottom:dashed;
+	border-collapse: collapse;
+}
+.TableCellBottomDashed1px
+{
+	border-right: lightgrey 0px dotted;
+	border-top: lightgrey 0px dotted;
+	border-left: lightgrey 0px dotted;
+	border-bottom: lightgrey 1px dotted;
+}
+
+.TableOddRow
+{
+	background-color: #EFF3FB;
+}
+
+.TableEvenRow
+{
+	background-color: #FFFFFF;	
+}
+	
+.IndexItem 
+{
+	color: #FFFFFF;
+	padding-right: 4px;
+	padding-left: 4px;
+	font-size: 9pt;
+}
+
+.IndexItem A
+{
+	color: #FFFFFF;
+	padding-right: 4px;
+	padding-left: 4px;
+	font-size: 9pt;
+}
+
+.IndexItem A:hover
+{
+	color: #D67A17;
+	text-decoration: none;
+}
+
+.IndexItem A:active
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.Wizard
+{
+	
+}
+
+.WizardTips
+{
+	color: #0066ff;
+	width: 100%;
+	text-align:left;
+}
+
+.WizardHeader
+{
+	background-position: 10px center;
+	background-image: url(../../../_Images/Neutral/Page/titleIconDiamond.gif);
+	background-repeat: no-repeat;
+	background-color: #008ee4;
+	padding-left: 10px;
+	height: 24px;
+	color: #ffffff;
+	font-family: 宋体, Sans-Serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+}
+
+.WizardNavigation
+{
+	/*background-image: url(../../../_Images/Neutral/Page/bannerBottom.jpg);*/
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding-right: 30px;
+	border-top: thin ridge;
+	height: 45px;
+}
+
+.GridViewSelectedRow
+{
+	background-color: #96ceff;
+}
+
+.OrgNodeText
+{
+	color:Red;
+}
+
+/*------------------------------导航条------------------------------*/
+.NavigationBanner
+{
+	color: #F47B06;
+	font-family: 宋体, Sans-Serif;
+	font-size: 9pt;
+	font-weight:lighter;
+}
+.NavigationBanner a
+{
+	font-size: 9pt;
+	font-family: 宋体, Sans-Serif;
+	color: #000000;
+	text-decoration: none;
+	font-weight:lighter;
+}
+.NavigationBanner a:hover
+{
+	color: #F47B06;
+	text-decoration: none;
+}
+.NavigationBanner a:active
+{
+	color:#000000;
+}
+.NavigationBanner a:link
+{
+	color: #000000;
+}
+
+/*开始------------------------------消息框------------------------------*/
+#messageArea 
+{ 
+	display: none; 
+	position: absolute;
+	top: 20px;
+	right:0;
+	margin: 0.4em;
+	padding: 0.4em;
+	border: 1px solid #841;
+	background: #db4;
+	color: #014;
+	font-size: 9pt;
+	font-family: 宋体, Sans-Serif;
+	color: #009900;
+} 
+
+#messageArea .button
+{
+	color: black;
+	background-color: white;
+	padding-right: 0.1em;
+	padding-left: 0.1em;
+	padding-bottom: 0.0em;
+	padding-top: 0.1em;
+	position: relative;
+	top: -2px;
+	left: -4px;
+	text-decoration: none;
+}
+
+#messageArea .buttonSelected
+{
+	padding-right: 0.1em;
+	padding-left: 0.2em;
+	padding-bottom: 0.1em;
+	padding-top: 0.2em;
+	background-color: #99ccff;
+	text-decoration: underline;
+}
+
+#messageArea .textSelected
+{
+	background-color: #99ccff;
+	
+}
+/*结束------------------------------消息框------------------------------*/
+
+/*开始--------------------------自动完成下拉框--------------------------*/
+.AutoCompleteDropDown
+{
+	display: none;
+	position: absolute;
+	margin: 0.4em;
+	padding: 0.4em;
+	background: #eef6fb;
+	color: #000000;
+	font-size: 9pt;
+	font-family: 宋体, Sans-Serif;
+	color: #000000;
+	left: 0px;
+	top: 0px;
+	border-right: #a3c7e2 1px solid;
+	border-top: #a3c7e2 1px solid;
+	border-left: #a3c7e2 1px solid;
+	border-bottom: #a3c7e2 1px solid;
+	cursor: hand;
+}
+.AutoCompleteDataItem
+{
+	width: 260px;
+}
+
+.AutoCompleteDataItemSelected
+{
+	background: #aec9e2;
+}
+
+.AutoCompleteDataItemOver
+{
+	background: #c4d8ea;
+}
+
+
+
+.StandardFont
+{
+	font-family: "新宋体","宋体", "Arial", "Verdana";
+	font-size: 9px;
+}
+.btable {
+/*	background-color: #CCCCCC;*/
+/*	border-collapse: collapse;*/
+	font-family: "新宋体", "Verdana", "Arial";
+	font-size: 9px;
+	table-layout: fixed;
+	text-indent: 6px;
+}
+
+
+.mtd {
+	font-size: 15px;
+	border: 1px outset;
+}
+.mtr{
+	border: 1px outset;
+}
+.mth {
+	color: #000000;
+	font-weight: bold;
+	font-size: 16px;
+	text-decoration: underline;
+	text-align: left;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.mtable {
+	background-color: #e2e2e2;
+	border-collapse: collapse;
+}
+/*table{
+	font-size: 15px;
+	font-family: "新宋体", "Verdana", "Arial";
+}*/
+.btr{
+	background-color: #FFFFFF;
+}
+/*		基本控件*/
+
+/*		分页			*/
+.TabStart{
+	background-image: url('images/onglets_debut_on.gif');
+	background-repeat: no-repeat
+}
+.TabOn{
+	background-image: url('images/onglets_bg_on.gif');
+	white-space: nowrap;
+	font-family: "新宋体", "Verdana", "Arial";
+	font-size: 14px;
+	color: #FFFFFF;
+	background-repeat: repeat-x;
+	vertical-align: middle
+}
+.TabOnOff{
+	background-image: url('images/onglets_croise_on_off.gif');
+	background-repeat: no-repeat
+}
+.TabOffOn{
+	background-repeat: no-repeat;
+	background-image: url('images/onglets_croise_off_on.gif');
+}
+.TabOff{
+	background-image: url('images/onglets_bg_off.gif');
+	white-space: nowrap;
+	font-family: "新宋体", "Verdana", "Arial";
+	font-size: 14px;
+	color: #0000CC;
+	background-repeat: repeat-x;
+	vertical-align: middle
+}
+.TabOffOff{
+	background-image: url('images/onglets_croise_off_off.gif');
+	background-repeat: no-repeat
+}
+.TabEnd{
+	background-image: url('images/onglets_fin_off.gif');
+	background-repeat: no-repeat
+}
+/*		A 		*/
+A.A_NewMenuOn:link{
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.A_NewMenuOn:active{
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.A_NewMenuOn:visited{
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.A_NewMenuOn:hover{
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.A_NewMenu:link {
+	COLOR: #003059; TEXT-DECORATION: none
+}
+A.A_NewMenu:active {
+	COLOR: #003059; TEXT-DECORATION: none
+}
+A.A_NewMenu:visited {
+	COLOR: #003059; TEXT-DECORATION: none
+}
+A.A_NewMenu:hover {
+	COLOR: #003059; TEXT-DECORATION: none
+}
+.Title{
+	font-size: 14px;
+	font-weight: bolder;
+	color: #000066;
+	text-decoration: underline;
+}
+.MYBUTTON {
+	BORDER-RIGHT: 1px inset rgb(99,110,139);
+	BORDER-TOP: 3px inset rgb(99,110,139);
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 9px;
+	BORDER-LEFT: 1px inset rgb(99,110,139);
+	BORDER-BOTTOM: 1px inset rgb(99,110,139);
+	FONT-STYLE: normal;
+	FONT-FAMILY: "新宋体", "Arial", "Helvetica", "sans-serif";
+	BACKGROUND-COLOR: #f3f0f0;
+	FONT-VARIANT: normal;
+	vertical-align: middle;
+}
+.Even {
+  background-color: #ffcc7f
+}
+.DataTD {
+	BORDER-RIGHT: 1px inset; 
+	BORDER-TOP: 1px inset; 
+	FONT-FAMILY: "新宋体","宋体", "Arial", "Verdana";
+	FONT-SIZE: 9px; 
+	BORDER-LEFT: 1px inset; 
+	COLOR: #000000; 
+	BORDER-BOTTOM: 1px inset; 
+	BACKGROUND-COLOR: #CCCCCC;
+}
+.DataTD1 {
+	BORDER-RIGHT: 1px inset; 
+	BORDER-TOP: 1px inset; 
+	FONT-FAMILY: "新宋体","宋体", "Arial", "Verdana";
+	FONT-SIZE: 9px; 
+	BORDER-LEFT: 1px inset; 
+	COLOR: #000000; 
+	BORDER-BOTTOM: 1px inset; 
+	BACKGROUND-COLOR: #999999;
+}
+
+.TDHeader{
+	BORDER-TOP: 1px inset; 
+	BORDER-BOTTOM: 1px inset; 
+	BORDER-LEFT: 1px inset; 
+	BORDER-RIGHT: 1px inset; 
+	FONT-FAMILY: "新宋体","宋体", "Arial", "Verdana";
+	FONT-SIZE: 14px;
+	COLOR: #FFCC00;
+	TEXT-ALIGN: left;
+	VERTICAL-ALIGN: bottom;
+	TEXT-INDENT: 6px;
+}
+.TDItem {
+	BORDER-TOP: 1px inset; 
+	BORDER-BOTTOM: 1px inset; 
+	BORDER-LEFT: 1px inset; 
+	BORDER-RIGHT: 1px inset; 
+	FONT-FAMILY: "新宋体","宋体", "Arial", "Verdana";
+	FONT-SIZE: 9px; 
+	COLOR: #000000; 
+}
+
+.tanchuBG {
+	FONT-FAMILY: "新宋体","宋体", "Arial", "Verdana";
+	FONT-SIZE: 9px; 
+	COLOR: #000000; 
+	BACKGROUND-COLOR: #E5F5FF;
+}
+.tanchuTD1 {
+	FONT-FAMILY: "新宋体","宋体", "Arial", "Verdana";
+	FONT-SIZE: 9px; 
+	COLOR: #000000; 
+	BACKGROUND-COLOR: #eeeeee;
+}
+.tanchuTD2 {
+	FONT-FAMILY: "新宋体","宋体", "Arial", "Verdana";
+	FONT-SIZE: 9px; 
+	COLOR: #000000; 
+	BACKGROUND-COLOR: #ffffff;
+}
+
+.Text 
+{
+	FONT-FAMILY: "新宋体","宋体", "Arial", "Verdana";
+	font-size:9px;
+	height:50px;
+    color: #003399;
+    font-style: normal; 
+    border-color: #93BEE2 #93BEE2 #93BEE2 #93BEE2 ; 
+    border: 1px #93BEE2 solid;  
+	
+}
+
+.ssssssss {
+	font-family: "宋体";
+	color: #FF9900;
+}
+/*.Input
+{
+	font-size: 9pt; 
+    color: #003399; 
+    font-family: "宋体"; 
+    font-style: normal; 
+    border: 1px #93BEE2 solid; 
+}/
+/*谈蓝色*/
+.btn1
+ {
+	BORDER-RIGHT: #2C59AA 1px solid; 
+	PADDING-RIGHT: 2px; 
+	BORDER-TOP: #2C59AA 1px solid; 
+	PADDING-LEFT: 2px; 
+	height: 22px; 
+	width: 65px; 
+	FONT-SIZE: 12px; 
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5); 
+	BORDER-LEFT: #2C59AA 1px solid; 
+	CURSOR: hand; 
+	COLOR: black; 
+	PADDING-TOP: 2px; 
+	BORDER-BOTTOM: #2C59AA 1px solid
+}
+/*天蓝色*/
+.btn2 
+{
+   border-right  : #002D96 1px solid; 
+   PADDING-RIGHT: 2px; 
+   BORDER-TOP: #002D96 1px solid; 
+   PADDING-LEFT: 2px; 
+   FONT-SIZE: 12px; 
+   FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#FFFFFF, EndColorStr=#9DBCEA); 
+   BORDER-LEFT: #002D96 1px solid; 
+   CURSOR: hand; 
+   COLOR: black; 
+   PADDING-TOP: 2px; 
+   BORDER-BOTTOM: #002D96 1px solid
+}
+/*青蓝色样式*/
+.btn3 
+{
+    BORDER-RIGHT: #7b9ebd 1px solid; 
+    PADDING-RIGHT: 2px; 
+    BORDER-TOP: #7b9ebd 1px solid; 
+    PADDING-LEFT: 2px; 
+    FONT-SIZE: 12px; 
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#cecfde); 
+    BORDER-LEFT: #7b9ebd 1px solid; 
+    CURSOR: head; 
+    COLOR: black; 
+    PADDING-TOP: 2px; 
+    BORDER-BOTTOM: #7b9ebd 1px solid
+}
+/*绿色样式*/
+.btn4 
+{
+    border-right: #7EBF4F 1px solid; 
+    PADDING-RIGHT: 2px; 
+    BORDER-TOP: #7EBF4F 1px solid; 
+    PADDING-LEFT: 2px; 
+    FONT-SIZE: 12px; 
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#CAE4B6); 
+    BORDER-LEFT: #7EBF4F 1px solid; 
+    CURSOR: hand; 
+    COLOR: black; 
+    PADDING-TOP: 2px; 
+    BORDER-BOTTOM: #7EBF4F 1px solid
+}
+.NormalNumber /*login登录框*/
+{
+	BORDER-RIGHT: 1px solid; 
+	BORDER-TOP: 1px solid; 
+	BORDER-LEFT: 1px solid; 
+	BORDER-BOTTOM:1px solid; 
+	TEXT-ALIGN: left
+}
+.texform  /*登录文本框*/
+{
+	font-size: 12px;
+	font-weight: lighter;
+	color:#000000;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #000000;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color:#000000;
+	width: 118px;
+	height: 20px;
+}
+
+/* 广告弹出窗口 */
+.ADWindow{border:#666 1px solid;background:#fff;} 
+.ADWindowTop{border-bottom:#eee 1px solid;margin-left:4px;padding:3px;font-weight:bold;text-align:left;font-size:12px;} 
+.ADWindowContent{margin:4px;font-size:12px;} 
+.ADWindow .close{height:15px;width:28px;border:none;cursor:pointer;text-decoration:underline;background:#fff} 
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ea3ac091-a814-4b91-b452-63125fab195d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.0.2:8914/ITrade/ITrade" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ITrade1.wsdl" MetadataType="Wsdl" ID="4d70ab83-0506-4d3d-aae4-1f6373842c8a" SourceId="1" SourceUrl="http://192.168.0.2:8914/ITrade/ITrade?wsdl=wsdl0" />
+    <MetadataFile FileName="ITrade4.xsd" MetadataType="Schema" ID="a4e0be94-7a6a-47cf-8cc8-5896e1c0dbf3" SourceId="1" SourceUrl="http://192.168.0.2:8914/ITrade/ITrade?xsd=xsd1" />
+    <MetadataFile FileName="ITrade41.xsd" MetadataType="Schema" ID="f9b7c893-8333-4dcf-bc4e-bee3401adb99" SourceId="1" SourceUrl="http://192.168.0.2:8914/ITrade/ITrade?xsd=xsd0" />
+    <MetadataFile FileName="ITrade42.xsd" MetadataType="Schema" ID="796d2554-86d9-475b-80cc-a7d92f070edd" SourceId="1" SourceUrl="http://192.168.0.2:8914/ITrade/ITrade?xsd=xsd3" />
+    <MetadataFile FileName="ITrade43.xsd" MetadataType="Schema" ID="0793204a-6f97-4edb-9e9d-7fb311498924" SourceId="1" SourceUrl="http://192.168.0.2:8914/ITrade/ITrade?xsd=xsd2" />
+    <MetadataFile FileName="CTrade1.wsdl" MetadataType="Wsdl" ID="f9c2f493-4097-4b07-827c-9d2d36155c25" SourceId="1" SourceUrl="http://192.168.0.2:8914/ITrade/ITrade" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

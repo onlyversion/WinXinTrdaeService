@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:intf="https://118.123.240.154:8080/hxBank/services/NetService" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="https://118.123.240.154:8080/hxBank/services/NetService" targetNamespace="https://118.123.240.154:8080/hxBank/services/NetService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="ProcessResponse">
+    <wsdl:part name="ProcessReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ProcessRequest">
+    <wsdl:part name="Request" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:portType name="IntersServerImpl">
+    <wsdl:operation name="Process" parameterOrder="Request">
+      <wsdl:input name="ProcessRequest" message="impl:ProcessRequest" />
+      <wsdl:output name="ProcessResponse" message="impl:ProcessResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetServiceSoapBinding" type="impl:IntersServerImpl">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="Process">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="ProcessRequest">
+        <wsdlsoap:body use="encoded" namespace="http://www.w3.org/2001/XMLSchema" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="ProcessResponse">
+        <wsdlsoap:body use="encoded" namespace="https://118.123.240.154:8080/hxBank/services/NetService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IntersServerImplService">
+    <wsdl:port name="NetService" binding="impl:NetServiceSoapBinding">
+      <wsdlsoap:address location="http://118.123.240.154:8081/hxBank/services/NetService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

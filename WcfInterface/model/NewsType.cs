@@ -19,6 +19,10 @@ namespace WcfInterface.model
         /// 公告
         /// </summary>
         Notice=2,
+        /// <summary>
+        /// 理财师说
+        /// </summary>
+        Articles=3,
 
     }
 }

@@ -302,6 +302,7 @@
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="ArticlesInfo.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Error.aspx.cs">
@@ -329,6 +330,13 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ArticlesInfo.aspx.cs">
+      <DependentUpon>ArticlesInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArticlesInfo.aspx.designer.cs">
+      <DependentUpon>ArticlesInfo.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

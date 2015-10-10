@@ -1,0 +1,15 @@
+E:\GitHub\WinXinTrdaeService\Data\bin\Debug\Data.dll
+E:\GitHub\WinXinTrdaeService\Data\bin\Debug\Data.pdb
+E:\GitHub\WinXinTrdaeService\Data\bin\Debug\com.gss.common.dll
+E:\GitHub\WinXinTrdaeService\Data\bin\Debug\com.individual.helper.dll
+E:\GitHub\WinXinTrdaeService\Data\bin\Debug\JingTong.Jyrj.Common.dll
+E:\GitHub\WinXinTrdaeService\Data\bin\Debug\log4net.dll
+E:\GitHub\WinXinTrdaeService\Data\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\GitHub\WinXinTrdaeService\Data\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+E:\GitHub\WinXinTrdaeService\Data\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+E:\GitHub\WinXinTrdaeService\Data\bin\Debug\MySql.Data.dll
+E:\GitHub\WinXinTrdaeService\Data\bin\Debug\JingTong.Jyrj.Common.pdb
+E:\GitHub\WinXinTrdaeService\Data\bin\Debug\log4net.xml
+E:\GitHub\WinXinTrdaeService\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+E:\GitHub\WinXinTrdaeService\Data\obj\Debug\Data.dll
+E:\GitHub\WinXinTrdaeService\Data\obj\Debug\Data.pdb

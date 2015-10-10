@@ -1714,17 +1714,17 @@ namespace GssManager
                 if (!ComFunction.SqlTransaction(sqlList))
                 {
                     rsdc.Result = false;
-                    rsdc.Desc = "添加新闻公告出错";
+                    rsdc.Desc = "添加操作失败，请重试！";
                     return rsdc;
                 }
                 rsdc.Result = true;
-                rsdc.Desc = "添加新闻公告成功";
+                rsdc.Desc = "添加操作成功！";
             }
             catch (Exception ex)
             {
                 ComFunction.WriteErr(ex);
                 rsdc.Result = false;
-                rsdc.Desc = "添加新闻公告失败";
+                rsdc.Desc = "添加操作失败，请重试！";
             }
             return rsdc;
         }
@@ -1780,17 +1780,17 @@ namespace GssManager
                 if (!ComFunction.SqlTransaction(sqlList))
                 {
                     rsdc.Result = false;
-                    rsdc.Desc = "修改新闻公告出错";
+                    rsdc.Desc = "保存出错，请重试！";
                     return rsdc;
                 }
                 rsdc.Result = true;
-                rsdc.Desc = "修该新闻公告成功";
+                rsdc.Desc = "保存成功！";
             }
             catch (Exception ex)
             {
                 ComFunction.WriteErr(ex);
                 rsdc.Result = false;
-                rsdc.Desc = "修改新闻公告失败";
+                rsdc.Desc = "保存出错，请重试！";
             }
             return rsdc;
         }

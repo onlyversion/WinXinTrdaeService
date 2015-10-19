@@ -378,6 +378,32 @@
             权限角色
             </summary>
         </member>
+        <member name="T:WcfInterface.model.AdvertListInfo">
+            <summary>
+            广告
+            </summary>
+        </member>
+        <member name="P:WcfInterface.model.AdvertListInfo.Result">
+            <summary>
+            Gets or sets a value indicating whether 
+            结果(1成功 0失败)
+            </summary>
+        </member>
+        <member name="P:WcfInterface.model.AdvertListInfo.Desc">
+            <summary>
+            Gets or sets 描述
+            </summary>
+        </member>
+        <member name="P:WcfInterface.model.AdvertListInfo.ReturnCode">
+            <summary>
+            Gets or sets 返回代码
+            </summary>
+        </member>
+        <member name="P:WcfInterface.model.AdvertListInfo.AdvertList">
+            <summary>
+            Gets or sets 节假日信息表
+            </summary>
+        </member>
         <member name="T:WcfInterface.ComFunction">
             <summary>
             bzj
@@ -8225,6 +8251,46 @@
             Gets or sets 绑定账号
             </summary>
         </member>
+        <member name="T:WcfInterface.model.Advert">
+            <summary>
+            广告
+            </summary>
+        </member>
+        <member name="P:WcfInterface.model.Advert.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:WcfInterface.model.Advert.ID">
+            <summary>
+            ID标识
+            </summary>
+        </member>
+        <member name="P:WcfInterface.model.Advert.Url">
+            <summary>
+            Url
+            </summary>
+        </member>
+        <member name="P:WcfInterface.model.Advert.Creator">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:WcfInterface.model.Advert.CreateDate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:WcfInterface.model.Advert.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:WcfInterface.model.Advert.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
         <member name="T:WcfInterface.model.WJY.PayCashFundInfo">
             <summary>
             经纪人支付保证金
@@ -8566,6 +8632,41 @@
         <member name="P:WcfInterface.model.FcQueryCon.OrgName">
             <summary>
             Gets or sets 组织名称
+            </summary>
+        </member>
+        <member name="T:WcfInterface.model.AdvertLqc">
+            <summary>
+            广告查询条件
+            </summary>
+        </member>
+        <member name="P:WcfInterface.model.AdvertLqc.LoginID">
+            <summary>
+            Gets or sets 登陆标识
+            </summary>
+        </member>
+        <member name="P:WcfInterface.model.AdvertLqc.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:WcfInterface.model.AdvertLqc.Status">
+            <summary>
+            状态:0全部；1，启用；2未启用
+            </summary>
+        </member>
+        <member name="P:WcfInterface.model.AdvertLqc.Creator">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:WcfInterface.model.AdvertLqc.StartTime">
+            <summary>
+            Gets or sets 开始时间
+            </summary>
+        </member>
+        <member name="P:WcfInterface.model.AdvertLqc.EndTime">
+            <summary>
+            Gets or sets 结束时间
             </summary>
         </member>
         <member name="T:WcfInterface.model.TradeMoney">

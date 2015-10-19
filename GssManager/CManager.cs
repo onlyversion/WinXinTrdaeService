@@ -5355,5 +5355,245 @@ namespace GssManager
             }
             return rsdc;
         }
+
+        /// <summary>
+        /// 广告查询
+        /// </summary>
+        /// <param name="lqc">广告查询条件</param>
+        /// <param name="pageindex">第几页,从1开始</param>
+        /// <param name="pagesize">每页多少条</param>
+        /// <param name="page">输出参数(总页数)</param>
+        /// <returns>广告信息</returns>
+        public AdvertListInfo GetAdvertInfoWithPage(AdvertLqc lqc, int pageindex, int pagesize, ref int page)
+        {
+            AdvertListInfo info = new AdvertListInfo();
+            SqlConnection sqlconn = null;
+            SqlCommand sqlcmd = null;
+            SqlDataReader sqldr = null;
+            info.AdvertList = new List<Advert>();
+            try
+            {
+                TradeUser TdUser = new TradeUser();
+                #region 判断登陆标识是否过期
+
+                if (!ComFunction.ExistUserLoginID(lqc.LoginID, ref TdUser))
+                {
+                    info.Result = false;
+                    info.ReturnCode = ResCode.UL003;
+                    info.Desc = ResCode.UL003Desc;
+                    return info;
+                }
+
+                #endregion
+              
+                string sql = string.Empty;
+                if (!string.IsNullOrEmpty(lqc.Name))
+                {
+                    sql = string.Format(" and Name='{0}'",lqc.Name);
+                }
+                if (!string.IsNullOrEmpty(lqc.Creator)) 
+                {
+                    sql = string.Format(" and Creator='{0}'", lqc.Creator);
+                }
+                if (lqc.Status==1) 
+                {
+                    sql = string.Format(" and Status=1");
+                }
+                else if(lqc.Status==2)
+                    sql = string.Format(" and Status=0");
+                string sqlcondition = string.Format("where CreateDate>='{0}' and CreateDate<='{1}' {2} ", lqc.StartTime.ToString("yyyy-MM-dd"),
+                     lqc.EndTime.ToString("yyyy-MM-dd"), sql);
+                sqlconn = new SqlConnection(ComFunction.SqlConnectionString);
+                sqlconn.Open();
+                sqlcmd = sqlconn.CreateCommand();
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+                sqlcmd.CommandText = "GetRecordFromPage";
+                sqlcmd.Parameters.Add("@selectlist", SqlDbType.VarChar);//选择字段列表
+                sqlcmd.Parameters.Add("@SubSelectList", SqlDbType.VarChar); //内部子查询字段列表
+                sqlcmd.Parameters.Add("@TableSource", SqlDbType.VarChar); //表名或视图表 
+                sqlcmd.Parameters.Add("@TableOrder", SqlDbType.VarChar); //排序后的表名称 即子查询结果集的别名
+                sqlcmd.Parameters.Add("@SearchCondition", SqlDbType.VarChar); //查询条件
+                sqlcmd.Parameters.Add("@OrderExpression", SqlDbType.VarChar); //排序 表达式
+                sqlcmd.Parameters.Add("@PageIndex", SqlDbType.Int);
+                sqlcmd.Parameters.Add("@PageSize", SqlDbType.Int);
+                sqlcmd.Parameters.Add("@PageCount", SqlDbType.Int);
+
+                sqlcmd.Parameters["@SubSelectList"].Value = "[ID],[Url],[Creator] ,[CreateDate],[Status],[Remark],[Name] ";
+                sqlcmd.Parameters["@selectlist"].Value = "[ID],[Url],[Creator] ,[CreateDate],[Status],[Remark],[Name]";
+
+                sqlcmd.Parameters["@TableSource"].Value = "Trade_Advert";
+
+                sqlcmd.Parameters["@TableOrder"].Value = "a";//别名
+                sqlcmd.Parameters["@SearchCondition"].Value = sqlcondition;
+
+                sqlcmd.Parameters["@OrderExpression"].Value = "order by CreateDate desc";
+                sqlcmd.Parameters["@PageIndex"].Value = pageindex;
+                sqlcmd.Parameters["@PageSize"].Value = pagesize;
+                sqlcmd.Parameters["@PageCount"].Direction = ParameterDirection.Output;
+
+                sqldr = sqlcmd.ExecuteReader();
+                while (sqldr.Read())
+                {
+                    Advert advert = new Advert();
+                    advert.ID = sqldr["ID"].ToString();
+                    advert.Creator = sqldr["Creator"].ToString();
+                    advert.Name = sqldr["Name"].ToString();
+                    advert.Remark = sqldr["Remark"].ToString();
+                    advert.CreateDate = Convert.ToDateTime(sqldr["CreateDate"]);
+                    advert.Status = Convert.ToBoolean(sqldr["Status"]);
+                    advert.Url = sqldr["Url"].ToString();
+                    info.AdvertList.Add(advert);
+                }
+                sqlconn.Close();
+                page = Convert.ToInt32(sqlcmd.Parameters["@PageCount"].Value);
+
+                info.Result = true;
+                info.Desc = "查询成功";
+            }
+            catch (Exception ex)
+            {
+                ComFunction.WriteErr(ex);
+                if (null != info.AdvertList && info.AdvertList.Count > 0)
+                {
+                    info.AdvertList.Clear();
+                }
+                info.Result = false;
+                info.Desc = "查询失败";
+            }
+            finally
+            {
+                if (null != sqlconn)
+                {
+                    sqlconn.Close();
+                }
+                if (null != sqldr)
+                {
+                    sqldr.Close();
+                }
+            }
+            return info;
+        }
+
+        /// <summary>
+        /// 添加广告
+        /// </summary>
+        /// <param name="loginId">登录标识</param>
+        /// <param name="exp">体验券</param>
+        /// <returns>ResultDesc</returns>
+        public ResultDesc AddAdvert(string loginId, Advert exp)
+        {
+            ResultDesc rsdc = new ResultDesc();
+            var tdUser = new TradeUser();
+            try
+            {
+                #region 判断登陆标识是否过期
+                if (!ComFunction.ExistUserLoginID(loginId, ref tdUser))
+                {
+                    rsdc.Result = false;
+                    rsdc.Desc = ResCode.UL003Desc;
+                    return rsdc;
+                }
+                #endregion
+                var sqlList = new List<string>();
+                sqlList.Add(string.Format("INSERT INTO [Trade_Advert]([ID]  ,[Url] ,[Creator] ,[CreateDate],[Status] ,[Remark],[Name]) VALUES ('{0}' ,'{1}' ,'{2}' ,'{3}' ,{4} ,'{5}','{6}')",
+                    exp.ID, exp.Url, exp.Creator, exp.CreateDate, Convert.ToByte(exp.Status), exp.Remark, exp.Name));
+
+                if (!ComFunction.SqlTransaction(sqlList))
+                {
+                    rsdc.Result = false;
+                    rsdc.Desc = "添加广告出错！";
+                    return rsdc;
+                }
+                rsdc.Result = true;
+                rsdc.Desc = "添加广告成功！";
+            }
+            catch (Exception ex)
+            {
+                ComFunction.WriteErr(ex);
+                rsdc.Result = false;
+                rsdc.Desc = "";
+            }
+            return rsdc;
+        }
+
+        /// <summary>
+        /// 删除广告
+        /// </summary>
+        /// <param name="loginId">登录标识</param>
+        /// <param name="id">广告标识</param>
+        /// <returns>ResultDesc</returns>
+        public ResultDesc DelAdvert(string loginId, string id)
+        {
+            ResultDesc rsdc = new ResultDesc();
+            var tdUser = new TradeUser();
+            try
+            {
+                #region 判断登陆标识是否过期
+                if (!ComFunction.ExistUserLoginID(loginId, ref tdUser))
+                {
+                    rsdc.Result = false;
+                    rsdc.Desc = ResCode.UL003Desc;
+                    return rsdc;
+                }
+                #endregion
+                var sqlList = new List<string>();
+                sqlList.Add(string.Format("DELETE FROM [Trade_Advert] WHERE ID='{0}'", id));
+                if (!ComFunction.SqlTransaction(sqlList))
+                {
+                    rsdc.Result = false;
+                    rsdc.Desc = "删除广告出错！";
+                    return rsdc;
+                }
+                rsdc.Result = true;
+                rsdc.Desc = "删除广告成功！";
+            }
+            catch (Exception ex)
+            {
+                ComFunction.WriteErr(ex);
+                rsdc.Result = false;
+                rsdc.Desc = "";
+            }
+            return rsdc;
+        }
+
+        /// <summary>
+        /// 编辑广告
+        /// </summary>
+        /// <param name="loginId">登录标识</param>
+        /// <param name="exp">广告</param>
+        /// <returns>ResultDesc</returns>
+        public ResultDesc EditAdvert(string loginId, Advert exp)
+        {
+            ResultDesc rsdc = new ResultDesc();
+            var tdUser = new TradeUser();
+            try
+            {
+                #region 判断登陆标识是否过期
+                if (!ComFunction.ExistUserLoginID(loginId, ref tdUser))
+                {
+                    rsdc.Result = false;
+                    rsdc.Desc = ResCode.UL003Desc;
+                    return rsdc;
+                }
+                #endregion
+                var sqlList = new List<string>();
+                sqlList.Add(string.Format("UPDATE [TradeDB].[dbo].[Trade_Advert] SET [Url] = '{0}',[Status] = {1},[Remark] ='{2}',[Name]='{3}' WHERE ID='{4}'", exp.Url, Convert.ToByte(exp.Status), exp.Remark, exp.Name, exp.ID));
+                if (!ComFunction.SqlTransaction(sqlList))
+                {
+                    rsdc.Result = false;
+                    rsdc.Desc = "编辑广告出错！";
+                    return rsdc;
+                }
+                rsdc.Result = true;
+                rsdc.Desc = "编辑广告成功！";
+            }
+            catch (Exception ex)
+            {
+                ComFunction.WriteErr(ex);
+                rsdc.Result = false;
+                rsdc.Desc = "";
+            }
+            return rsdc;
+        }
     }
 }

@@ -678,5 +678,43 @@ namespace GssManager
         /// <returns>ResultDesc</returns>
         [OperationContract]
         ResultDesc DelExperience(string loginId, int id);
+
+        /// <summary>
+        /// 广告查询
+        /// </summary>
+        /// <param name="lqc">广告查询条件</param>
+        /// <param name="pageindex">第几页,从1开始</param>
+        /// <param name="pagesize">每页多少条</param>
+        /// <param name="page">输出参数(总页数)</param>
+        /// <returns>广告信息</returns>
+        [OperationContract]
+        AdvertListInfo GetAdvertInfoWithPage(AdvertLqc lqc, int pageindex, int pagesize, ref int page);
+
+        /// <summary>
+        /// 添加广告
+        /// </summary>
+        /// <param name="loginId">登录标识</param>
+        /// <param name="exp">体验券</param>
+        /// <returns>ResultDesc</returns>
+        [OperationContract]
+        ResultDesc AddAdvert(string loginId, Advert exp);
+
+        /// <summary>
+        /// 删除广告
+        /// </summary>
+        /// <param name="loginId">登录标识</param>
+        /// <param name="id">广告标识</param>
+        /// <returns>ResultDesc</returns>
+        [OperationContract]
+        ResultDesc DelAdvert(string loginId, string id);
+
+        /// <summary>
+        /// 编辑广告
+        /// </summary>
+        /// <param name="loginId">登录标识</param>
+        /// <param name="exp">广告</param>
+        /// <returns>ResultDesc</returns>
+        [OperationContract]
+        ResultDesc EditAdvert(string loginId, Advert exp);
     }
 }

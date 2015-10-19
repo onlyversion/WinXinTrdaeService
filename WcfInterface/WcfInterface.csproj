@@ -59,6 +59,9 @@
     <Compile Include="ComFunction.myc.cs" />
     <Compile Include="ComFunction_Bzj.cs" />
     <Compile Include="ComFunction_Privilege.cs" />
+    <Compile Include="model\Advert.cs" />
+    <Compile Include="model\AdvertListInfo.cs" />
+    <Compile Include="model\AdvertLqc.cs" />
     <Compile Include="model\CommissionRatioSetInfo.cs" />
     <Compile Include="model\FcQueryCon.cs" />
     <Compile Include="Fields.cs" />

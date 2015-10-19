@@ -1,0 +1,22 @@
+
+时间：2015-10-16 11:43:58,428 消息:Sql事务出错跟踪：见此提示转马友春列名 'True' 无效。INSERT INTO [Trade_Advert]([ID]  ,[Url] ,[Creator] ,[CreateDate],[Status] ,[Remark],[Name]) VALUES ('735d3aab-8f78-4525-b16f-ea7c0c6a5f04' ,'xs登陆进度.jpg' ,'admin' ,'2015/10/16 11:38:48' ,True ,'12121','qqq')
+ 
+ System.Exception: Sql事务出错跟踪：见此提示转马友春列名 'True' 无效。INSERT INTO [Trade_Advert]([ID]  ,[Url] ,[Creator] ,[CreateDate],[Status] ,[Remark],[Name]) VALUES ('735d3aab-8f78-4525-b16f-ea7c0c6a5f04' ,'xs登陆进度.jpg' ,'admin' ,'2015/10/16 11:38:48' ,True ,'12121','qqq')
+
+
+时间：2015-10-16 11:46:34,839 消息:Sql事务出错跟踪：见此提示转马友春将截断字符串或二进制数据。
+语句已终止。INSERT INTO [Trade_Advert]([ID]  ,[Url] ,[Creator] ,[CreateDate],[Status] ,[Remark],[Name]) VALUES ('dbce0052-d595-4f7f-ad12-a1edcf1dc5ac' ,'xs登陆进度.jpg' ,'admin' ,'2015/10/16 11:46:33' ,1 ,'qqqqq','q')
+ 
+ System.Exception: Sql事务出错跟踪：见此提示转马友春将截断字符串或二进制数据。
+语句已终止。INSERT INTO [Trade_Advert]([ID]  ,[Url] ,[Creator] ,[CreateDate],[Status] ,[Remark],[Name]) VALUES ('dbce0052-d595-4f7f-ad12-a1edcf1dc5ac' ,'xs登陆进度.jpg' ,'admin' ,'2015/10/16 11:46:33' ,1 ,'qqqqq','q')
+
+
+时间：2015-10-16 15:27:56,724 消息:Sql事务出错跟踪：见此提示转马友春'd3aab8f784525b16fea7c0c6a5f04' 附近有语法错误。DELETE FROM [Trade_Advert] WHERE ID=735d3aab8f784525b16fea7c0c6a5f04
+ 
+ System.Exception: Sql事务出错跟踪：见此提示转马友春'd3aab8f784525b16fea7c0c6a5f04' 附近有语法错误。DELETE FROM [Trade_Advert] WHERE ID=735d3aab8f784525b16fea7c0c6a5f04
+
+
+时间：2015-10-16 15:28:41,776 消息:Sql事务出错跟踪：见此提示转马友春'd3aab8f784525b16fea7c0c6a5f04' 附近有语法错误。DELETE FROM [Trade_Advert] WHERE ID=735d3aab8f784525b16fea7c0c6a5f04
+ 
+ System.Exception: Sql事务出错跟踪：见此提示转马友春'd3aab8f784525b16fea7c0c6a5f04' 附近有语法错误。DELETE FROM [Trade_Advert] WHERE ID=735d3aab8f784525b16fea7c0c6a5f04
+

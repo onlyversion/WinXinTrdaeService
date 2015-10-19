@@ -292,6 +292,7 @@
     <Content Include="News.aspx" />
     <Content Include="NewsInfo.aspx" />
     <Content Include="TradeService.svc" />
+    <Content Include="UpLoadImage.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -336,6 +337,13 @@
     </Compile>
     <Compile Include="ArticlesInfo.aspx.designer.cs">
       <DependentUpon>ArticlesInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpLoadImage.aspx.cs">
+      <DependentUpon>UpLoadImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpLoadImage.aspx.designer.cs">
+      <DependentUpon>UpLoadImage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

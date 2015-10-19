@@ -14,6 +14,6 @@ E:\GitHub\WinXinTrdaeService\Trade\bin\Debug\Data.pdb
 E:\GitHub\WinXinTrdaeService\Trade\bin\Debug\WcfInterface.pdb
 E:\GitHub\WinXinTrdaeService\Trade\bin\Debug\WcfInterface.xml
 E:\GitHub\WinXinTrdaeService\Trade\bin\Debug\log4net.xml
-E:\GitHub\WinXinTrdaeService\Trade\obj\Debug\Trade.csprojResolveAssemblyReference.cache
 E:\GitHub\WinXinTrdaeService\Trade\obj\Debug\Trade.dll
 E:\GitHub\WinXinTrdaeService\Trade\obj\Debug\Trade.pdb
+E:\GitHub\WinXinTrdaeService\Trade\obj\Debug\Trade.csprojResolveAssemblyReference.cache

@@ -1551,6 +1551,7 @@ namespace Trade
         }
         #endregion
 
+        #region 设置会员佣金比例
         /// <summary>
         /// 设置会员佣金比例
         /// </summary>
@@ -1606,7 +1607,8 @@ namespace Trade
                 rsdc.Desc = "服务器返回错误";
             }
             return rsdc;
-        }
+        } 
+        #endregion
 
 
         #region 获取会员佣金比例
